@@ -18,6 +18,9 @@
       ],
       "ts-utils": [
         "node_modules/ts-utils/index"
+      ],
+      "assets-pairs-order": [
+        "node_modules/@waves/assets-pairs-order/dist/browser"
       ]
     }
   },

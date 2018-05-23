@@ -38,10 +38,11 @@
     "mocha": "^4.0.1",
     "mock-require": "^2.0.2",
     "requirejs": "^2.3.5",
-    "typescript": "^2.5.3",
-    "uglify-js": "^3.1.4"
+    "typescript": "^2.8.3",
+    "uglify-es": "^3.3.9"
   },
   "dependencies": {
+    "@waves/assets-pairs-order": "3.2.2",
     "bignumber.js": "4.1.0",
     "crypto-js": "3.1.9-1",
     "node-fetch": "1.7.3",

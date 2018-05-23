@@ -50,6 +50,7 @@ export interface INodeAPIv1 {
         utxSize(): Promise<any>;
         utxGet(id: string): Promise<any>;
         utxGetList(): Promise<any>;
+        massTransfer(data: IHash<any>, keyPair: IKeyPair): Promise<any>;
     },
     utils: {
         time(): Promise<number>;

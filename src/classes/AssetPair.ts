@@ -1,7 +1,7 @@
 import { IHash } from '../../interfaces';
 import { IAsset } from './Asset';
 
-import { v1 as MatcherAPIv1 } from '../api/matcher/index';
+import { getOrderPair } from '../utils/pairOrder';
 import { getStorage } from '../utils/storage';
 import Asset from './Asset';
 
@@ -15,17 +15,6 @@ function getAssetIds(assetOne, assetTwo) {
 function getKey(part1, part2) {
     const parts = [part1, part2].sort();
     return `${parts[0]}_${parts[1]}`;
-}
-
-function getMatcherPairOrder(assetOne, assetTwo) {
-
-    return MatcherAPIv1.getOrderbook(assetOne, assetTwo).then((orderbook) => {
-        return {
-            amountAssetId: orderbook.pair.amountAsset,
-            priceAssetId: orderbook.pair.priceAsset
-        };
-    });
-
 }
 
 
@@ -81,12 +70,11 @@ export default {
             if (pair) {
                 return pair;
             } else {
-                return getMatcherPairOrder(assetOneId, assetTwoId).then((matcherPair) => {
-                    return Promise.all([
-                        Asset.get(matcherPair.amountAssetId),
-                        Asset.get(matcherPair.priceAssetId)
-                    ]);
-                }).then((assets) => {
+                const matcherPair = getOrderPair(assetOneId, assetTwoId);
+                return Promise.all([
+                    Asset.get(matcherPair.amountAssetId),
+                    Asset.get(matcherPair.priceAssetId)
+                ]).then((assets) => {
                     const newPair = new AssetPair(assets[0], assets[1]);
                     return storage.set(key, newPair);
                 });
