@@ -1,4 +1,4 @@
-# This library is no longer maintained. Please use [waves-transactions](https://github.com/ebceu4/waves-transactions) or [waves-signature-adapter](https://github.com/wavesplatform/waves-signature-adapter)
+# This library is no longer maintained. Please use [waves-transactions](https://github.com/wavesplatform/waves-transactions) or [waves-signature-adapter](https://github.com/wavesplatform/waves-signature-adapter)
 
 
 # Waves API [![npm version](https://badge.fury.io/js/%40waves%2Fwaves-api.svg)](https://www.npmjs.com/package/@waves/waves-api) [![downloads/month](https://img.shields.io/npm/dm/%40waves%2Fwaves-api.svg)](https://www.npmjs.com/package/@waves/waves-api)
