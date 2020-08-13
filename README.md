@@ -2,7 +2,7 @@
 
 Waves Platform core features and Waves API library for both Node.js and browser.
 
-The latest and most actual version of this documentation [is hosted on GitHub](https://github.com/Spoiledpay/waves-api/README.md).
+The latest and most actual version of this documentation [is hosted on GitHub](https://github.com/Spoiledpay/waves-api/).
 
 ## Installation
 
