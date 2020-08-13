@@ -475,6 +475,7 @@ Test configuration may be changed in the _./node_modules/@waves/waves-api/karma.
 
 * [**Phil Filippak**](https://github.com/xenohunter) - *Initial work*
 * [**Daniil Tsigelnitskiy**](https://github.com/tsigel) - *TypeScript expertise*
+* [**Fernando Dantas**](https://github.com/spoiledpay) - *javaseript expertise*
 
 See also the list of [contributors](https://github.com/wavesplatform/waves-api/contributors) who participated in this project.
 
